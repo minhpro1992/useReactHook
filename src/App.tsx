@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+type Props = {
+  count: number;
+};
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState<number>(0);
+  const func = () => {
+    document.title = `You clicked ${count} times`;
+    console.log("call func");
+  };
+  useEffect(func, [count]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>You clicked {count} times from Parent component</p>
+      <Counter count={count}></Counter>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
 
-export default App;
+const Counter = (props: Props) => {
+  const { count } = props;
+  return (
+    <div>
+      <p>Child component: {count}</p>
+      <ThirdComponent count={count}></ThirdComponent>
+    </div>
+  );
+};
+
+const ThirdComponent = (props: Props) => {
+  const { count } = props;
+
+  return (
+    <div>
+      <span>Third Componnent: {count}</span>
+    </div>
+  );
+};
+
+export default Example;

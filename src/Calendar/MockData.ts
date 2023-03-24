@@ -1,0 +1,81 @@
+const mockRooms = [
+  {
+    _id: "63ed976a9a810cbd03ca08ac",
+    name: "Room 2",
+    asset: "Projector Op wall",
+    status: "open",
+  },
+  {
+    _id: "63ed97db9a810cbd03ca08b3",
+    name: "Room 1",
+    asset: "pC Lab",
+    status: "open",
+  },
+];
+const mockTickets = [
+  {
+    _id: "63f31dde9b14337bceacbb6c",
+    room: {
+      _id: "63ed97db9a810cbd03ca08b3",
+      name: "Room 1",
+      asset: "pC Lab",
+      status: "open",
+      createdAt: "2023-02-16T02:39:38.095Z",
+      updatedAt: "2023-02-16T02:39:38.095Z",
+      __v: 0,
+    },
+    author: {
+      _id: "63f2df03fe5e1b8e4ce8fcd4",
+      username: "minhnv47",
+      firstName: "Minh",
+      lastName: "Nguyen",
+    },
+    status: "open",
+    bookingType: "none",
+    weekDay: "Monday",
+    startDate: "2023-02-18T00:00:00.000Z",
+    endDate: "2023-02-19T00:00:00.000Z",
+    startTime: "8:00:00",
+    endTime: "9:30:00",
+    createdAt: "2023-02-20T07:14:38.012Z",
+    updatedAt: "2023-02-20T07:14:38.012Z",
+    __v: 0,
+    startAt: "2023-02-18T01:00:00.000Z",
+    endAt: "2023-02-19T06:00:00.000Z",
+  },
+  {
+    _id: "63f31e919b14337bceacbb6f",
+    room: {
+      _id: "63ed976a9a810cbd03ca08ac",
+      name: "Room 2",
+      asset: "Projector Op wall",
+      status: "open",
+      createdAt: "2023-02-16T02:39:38.095Z",
+      updatedAt: "2023-02-16T02:39:38.095Z",
+      __v: 0,
+    },
+    author: {
+      _id: "63f2df03fe5e1b8e4ce8fcd4",
+      username: "minhnv47",
+      firstName: "Minh",
+      lastName: "Nguyen",
+    },
+    status: "open",
+    bookingType: "weekly",
+    weekDay: "Tuesday",
+    startDate: "2023-02-15T00:00:00.000Z",
+    endDate: "2023-03-01T00:00:00.000Z",
+    startTime: "10:00:00",
+    endTime: "13:00:00",
+    createdAt: "2023-02-20T07:17:37.485Z",
+    updatedAt: "2023-02-20T07:17:37.485Z",
+    __v: 0,
+    startAt: "2023-02-15T03:00:00.000Z",
+    endAt: "2023-03-01T06:00:00.000Z",
+  },
+];
+
+export const MockData = {
+  mockRooms,
+  mockTickets,
+} as const;
