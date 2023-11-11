@@ -9,6 +9,7 @@ import Calendar from "./Calendar";
 import ExamplePerformance from "./ExamplePerformance";
 import Example from "./ExampleMemo";
 import ExampleUseRef from "./ExampleUseRef";
+import ExampleProductDetail from "./ExampleProductDetail";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,8 +20,8 @@ root.render(
     {/* <Example /> */}
     {/* <App /> */}
     {/* <ExampleContext></ExampleContext> */}
-    {/* <ExampleReducer></ExampleReducer> */}
-    <ExamplePerformance></ExamplePerformance>
+    <ExampleProductDetail></ExampleProductDetail>
+    {/* <ExamplePerformance></ExamplePerformance> */}
   </React.StrictMode>
 );
 
