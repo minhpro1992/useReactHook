@@ -10,6 +10,7 @@ import ExamplePerformance from "./ExamplePerformance";
 import Example from "./ExampleMemo";
 import ExampleUseRef from "./ExampleUseRef";
 import ExampleProductDetail from "./ExampleProductDetail";
+import PostList from "./ExampleProp";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,8 +21,9 @@ root.render(
     {/* <Example /> */}
     {/* <App /> */}
     {/* <ExampleContext></ExampleContext> */}
-    <ExampleProductDetail></ExampleProductDetail>
+    {/* <ExampleProductDetail></ExampleProductDetail> */}
     {/* <ExamplePerformance></ExamplePerformance> */}
+    <PostList />
   </React.StrictMode>
 );
 
