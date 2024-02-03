@@ -1,32 +1,11 @@
-import { useState } from "react";
+import { useRecoilState } from "recoil";
 import { NoData } from "./components/Nodata";
 import { PostItem } from "./components/postItem";
-import { PostType, PostListProps } from "./types";
-
-const initialPosts: PostListProps = [
-  {
-    title: "post 1",
-    description: "des 1",
-    id: 1,
-    comments: [
-      {
-        id: 1,
-        title: "comment 1",
-        description: "des comment 1",
-      },
-      {
-        id: 2,
-        title: "comment 2",
-        description: "des comment 2",
-      },
-    ],
-  },
-  { title: "post 2", description: "des 2", id: 2, comments: [] },
-  { title: "post 3", description: "des 3", id: 3, comments: [] },
-];
+import { postListAtom } from "./recoil/posts";
+import { PostListProps, PostType } from "./types";
 
 export default function PostList() {
-  const [posts, setPosts] = useState(initialPosts);
+  const [posts, setPosts] = useRecoilState(postListAtom);
   const handleDeletePost = (postId: number) => () => {
     alert("Click me: " + postId);
     const newPosts = posts.filter((post: PostType) => post.id !== postId);

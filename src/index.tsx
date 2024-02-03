@@ -11,6 +11,7 @@ import Example from "./ExampleMemo";
 import ExampleUseRef from "./ExampleUseRef";
 import ExampleProductDetail from "./ExampleProductDetail";
 import PostList from "./ExampleProp";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,7 +24,9 @@ root.render(
     {/* <ExampleContext></ExampleContext> */}
     {/* <ExampleProductDetail></ExampleProductDetail> */}
     {/* <ExamplePerformance></ExamplePerformance> */}
-    <PostList />
+    <RecoilRoot>
+      <PostList />
+    </RecoilRoot>
   </React.StrictMode>
 );
 
