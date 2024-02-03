@@ -1,12 +1,12 @@
 import { FC } from "react";
+import { PostType } from "../../types";
 import { Comments } from "./Comments";
 
-// export type PostItemPropsType = {
-//   id: number;
-//   title: string;
-//   description: string;
-// };
-export const PostItem = (props: any) => {
+export type PostTypeProps = {
+  post: PostType;
+  onClick: (postId: number) => () => void;
+};
+export const PostItem: FC<PostTypeProps> = (props) => {
   const { post, onClick } = props;
   return (
     <li key={post.id}>

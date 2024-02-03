@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { NoData } from "./components/Nodata";
 import { PostItem } from "./components/postItem";
+import { PostType, PostListProps } from "./types";
 
-const initialPosts = [
+const initialPosts: PostListProps = [
   {
     title: "post 1",
     description: "des 1",
@@ -28,11 +29,11 @@ export default function PostList() {
   const [posts, setPosts] = useState(initialPosts);
   const handleDeletePost = (postId: number) => () => {
     alert("Click me: " + postId);
-    const newPosts = posts.filter((post: any) => post.id !== postId);
+    const newPosts = posts.filter((post: PostType) => post.id !== postId);
     setPosts(newPosts);
   };
   const handleAddPost = () => {
-    const newPosts: any = posts.concat([
+    const newPosts: PostListProps = posts.concat([
       {
         id: posts.length + 1,
         title: `post ${posts.length + 1}`,
