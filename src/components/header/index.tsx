@@ -1,13 +1,16 @@
 "use client";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
+import { FC, RefObject } from "react";
 import styled from "styled-components";
-
-export const Header: FC = () => {
+type HeaderProps = {
+  headerRef?: RefObject<HTMLDivElement>;
+};
+export const Header: FC<HeaderProps> = (props) => {
+  const { headerRef } = props;
   return (
     <header>
-      <div className="grid grid-cols-12 items-center">
+      <div className="grid grid-cols-12 items-center" ref={headerRef}>
         <div className="md:order-1 col-start-1 col-span-2">
           <a href="/" className="text-black">
             <img src="./google.svg" alt="google" width={40} height={40} />
