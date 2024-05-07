@@ -23,7 +23,9 @@ const initialPosts: PostListProps = [
   { title: "post 3", description: "des 3", id: 3, comments: [] },
 ];
 
-export const postListAtom = atom({
+const postListAtom = atom({
   key: "postListAtom",
   default: initialPosts,
 });
+
+export { initialPosts, postListAtom };

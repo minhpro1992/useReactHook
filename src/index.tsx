@@ -10,8 +10,10 @@ import ExamplePerformance from "./ExamplePerformance";
 import Example from "./ExampleMemo";
 import ExampleUseRef from "./ExampleUseRef";
 import ExampleProductDetail from "./ExampleProductDetail";
-import PostList from "./ExampleProp";
+import PostList from "./ExamplePostListRecoil";
 import { RecoilRoot } from "recoil";
+import IntersectionObserver from "./ExampleIntersectionObserver";
+import ResizeObserverExample from "./ExampleResizeObserver";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -24,9 +26,11 @@ root.render(
     {/* <ExampleContext></ExampleContext> */}
     {/* <ExampleProductDetail></ExampleProductDetail> */}
     {/* <ExamplePerformance></ExamplePerformance> */}
-    <RecoilRoot>
+    {/* <RecoilRoot>
       <PostList />
-    </RecoilRoot>
+    </RecoilRoot> */}
+    <IntersectionObserver />
+    {/* <ResizeObserverExample /> */}
   </React.StrictMode>
 );
 
