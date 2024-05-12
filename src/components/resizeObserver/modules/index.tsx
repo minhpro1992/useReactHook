@@ -11,7 +11,7 @@ export const useResizeObserver = () => {
 
     observerRef.current = new ResizeObserver((entries) => {
       for (let entry of entries) {
-        console.log(entry);
+        // console.log(entry);
 
         setDimensions(entry.contentRect);
       }
